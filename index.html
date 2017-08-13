@@ -1,11 +1,286 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="UTF-8">
 		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#container{
+				width: 100%;
+				height: $h435;
+				margin: 0 auto;
+				border: 1px solid;
+				position: relative;
+			}
+			#title{
+				position: absolute;
+				left: 800px;
+				top: 400px;
+			}
+			#title a{
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				color: #fff;
+				font-size: 10px;
+				display: inline-block;
+				background: black;
+				text-align: center;
+				padding: 5px;
+				text-decoration: none;
+			}
+			#firstCarousel{
+				overflow: hidden;
+				width: 100%;
+				margin: 0 auto;
+			    height: 435px;
+			    background: #032c43;
+			}
+			#firstCarousel div{
+				width: 1200px;
+				height: 435px;
+				margin: 0 auto;
+				position: relative;
+				
+			}
+			.up{
+				position: absolute;
+				top: 2em;
+				width: 100%;
+				text-align: center;
+				font-size: 3em;
+				color: #48e2ff;
+				font-weight: bold;
+			}
+			.down{
+				position: absolute;
+				top: 7em;
+				width: 100%;
+				text-align: center;
+				font-size: 1.5em;
+				color: #fff;
+				font-weight: bold;
+			}
+			.down span{
+				color: #48e2ff;
+			}
+			#thirdCarousel{
+				width: 100%;
+				margin: 0 auto;
+			    height: 435px;
+			    background: url(img/banner_03.png) no-repeat center top;
+			    color: white;
+			}
+			#thirdCarousel div{
+				position: relative;
+				width: 1200px;
+				height: 435px;
+				margin: 0 auto;
+			}
+			.upper{
+				position: absolute;
+				top: 3em;
+				font-size: 2.5em;
+				font-weight: bold;
+			}
+			.low{
+				position: absolute;
+				top: 9.5em;
+				font-size: 1.2em;
+				font-weight: bold;
+			}
+			#thirdCarousel img{
+				width: 1500px;
+				height: 340px;
+				-webkit-animation: up 1000ms ease-in;
+				animation: up 1000ms ease-in;
+				padding-top: 5em;
+				padding-left: 2em;
+			}
+			#thirdCarousel h3{
+				position: absolute;
+				top: 16em;
+				padding: 0.5em 1em;
+				border: 1px solid #fff;
+			}
+			#firstCarousel img{
+				width: 1117px;
+				height: 434px;
+				-webkit-animation: up 1000ms ease-in;
+				animation: up 1000ms ease-in;
+				padding-left:2em ;
+			}
+			@-webkit-keyframes up{
+				from{
+					transform: translate(0,35px);
+				}
+				to{
+					transform: translate(0,0);
+				}
+			}
+			#secondCarousel{
+				width: 100%;
+				margin: 0 auto;
+			    height: 435px;
+			    background: url(img/banner_02.png) no-repeat center top;
+			}
+			#secondCarousel div{
+				width: 1200px;
+				height: 435px;
+				margin: 0 auto;
+			}
+			.one{
+				padding-top: 2.5em;
+				font-size: 64px;
+			}
+			.two{
+				font-size: 40px;
+			}
+			#secondCarousel div p{
+				width: 100%;
+				text-align: center;
+				color: #fff;
+				font-weight: bold;
+				-webkit-animation: move 500ms ease-in;
+				animation: move 500ms ease-in;
+			}
+			@-webkit-keyframes move{
+				from{
+					opacity: 0;
+				}
+				to{
+					opacity: 1;
+				}
+			}
+			#fourthCarousel{
+				width: 100%;
+				margin: 0 auto;
+			    height: 435px;
+			    background: #292169;
+			}
+			#four{
+				width: 100%;
+				height: 435px;
+				margin: 0 auto;
+				background: url(img/banner_04.png) no-repeat center top;
+				text-align: center;
+				color: white;
+				font-weight: bolder;
+			}
+			#four img{
+				-webkit-animation: move 1000ms ease-in;
+				animation: move 1000ms ease-in;
+				-webkit-animation: up 1000ms ease-in;
+				animation: up 1000ms ease-in;
+			}
+			.content{display: none;}
+			.show{display: block;}
+			.pointShow{
+				background: yellow!important;
+				color: #000!important;
+			}
+			#container b{position: absolute;padding: 5px;
+				background: rgba(255,255,255,0);cursor: pointer;
+				font-size: 4em;
+				color: #ccc;opacity: 0.5;
+				z-index: 999;
+			}
+			#left{top: 165px;left: 45px;}
+			#right{top: 165px;right: 45px;}
+		</style>
 	</head>
 	<body>
-		<h1>test one</h1>
-	<div>�Ҿ�����</div>
+		<div id="container">
+			<div id="title">
+				<a href="#" class="pointShow"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+			<b id="left">&lt;</b>
+			<b id="right">&gt;</b>
+			<div id="article">
+				<div class="content show" style="background: lightgreen;">
+					<div id="firstCarousel">
+						<div>
+							<img src="img/banner_05.png" />
+							<p class="up">音视频点播VOD新用户免费福利</p>
+							<p class="down">开通即送<span>5000元</span>代金券</p>
+						</div>
+					</div>
+				</div>
+				<div class="content" >
+					<div id="secondCarousel">
+						<div>
+							<p class="one">天智平台</p>
+							<p class="two">人之思虑，托于天智</p>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div id="thirdCarousel">
+						<div >
+							<img src="img/banner_07.png"/>
+							<p class="upper">优化型云服务器震撼发布！</p>
+							<p class="low">计算优化型BBC、存储优化型BBC同步推出！</p>
+							<h3>查询详情</h3>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div id="fourthCarousel">
+						<div id="four">
+							<img src="img/banner_06.png" style="padding-top: 7em;"/>
+							<p style="font-size: 3em;padding: 0.3em 0;">百度云 释放科技的力量</p>
+							<p style="font-size: 2.5em; ">百度云计算品牌全新升级</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var num = 0;   
+			var index;    
+			var a = document.getElementsByTagName("a");
+			var content = document.querySelectorAll(".content");
+			var parent = document.getElementById("container");
+			var left = document.getElementById("left");
+			var right = document.getElementById("right");
+			
+			var timer = setInterval(autoMove,1000);
+			function autoMove(){
+				index = num+1;
+				if(index==content.length){index=0;} 
+				move();			
+			}
+			
+			for(var i=0;i<content.length;i++){
+				a[i].index = i;				
+				a[i].onmouseover = move;   
+			}
+			
+			function move(){
+				a[num].className = "";
+				a[this.index].className = "pointShow";
+				content[num].className = "content";
+				content[this.index].className = "show";
+				num = this.index;
+			}
+			
+			parent.onmouseover = function(){
+				clearInterval(timer);
+			}
+			parent.onmouseout = function(){
+				timer = setInterval(autoMove,1000)
+			}
+
+			left.onclick = function(){
+				index = num-1;
+				if(index<0){index=content.length-1}
+				move();
+			}
+			right.onclick = autoMove;
+
+		</script>
 	</body>
 </html>
